@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../styles.css">
+    <meta charset="utf-8">
+    <title>Advanced Computer Science I</title>
+  </head>
+
+
+  <body>
+    <h1>Projects</h1>
+    <a href="Projects/Journals/index.html"><h2>Journals</h2></a>
+    <a href="Projects/ISP/Journal.html"><h2>Independent Study Project</h2></a>    
+    <a href="Projects/Essays/index.html"><h2>Essays</h2></a>
+    <a href="../index.html"><h6>go back</h6></a>
+  </body>
+</html>

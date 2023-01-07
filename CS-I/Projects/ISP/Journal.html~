@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../../../styles.css">
+    <meta charset="utf=8">
+    <title>Independent Study Project</title>
+    <h1 style="text-align: center"> ISP Journal </h1>
+  </head>
+
+  <body>    
+    <div>
+      <h1> 2-Jan-2023 </h1>
+      <div class="sub">
+	<h3> The Roles: </h3>
+	<p>Software Development Engineer: <b/> Software engineers are the people who deal with the creation of programs by actually designing and coding the software. As of right now, I do not belive I would be a very good development engineer because my knowledge on computer science and engineering principals are fairly limited. I can improve in this area by continuing to enroll in computer science classes to study and by gaining experience over time. </p>
+	<p>QA Engineer: QA engineers or quality assurance are the people who test software for bugs and ease of use. QA engineers implement and execute test plans to ensure good functionality of the product and that it fills all the requirements</p>
+	<p>Project Manager: </p>
+	<p>Product Manager: </p>
+	<p>Release Engineer: </p>
+      </div>
+      <a href="../../index.html"><h6>go back</h6></a>
+    </div>
+  </body>
+</html>

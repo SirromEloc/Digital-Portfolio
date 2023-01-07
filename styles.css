@@ -1,0 +1,22 @@
+h1 { 
+    color: #31353f;
+}
+h2 {
+    color: #7c7f82;
+    font-weight: bold;
+}
+.credit {
+    color: #f4f5f4;
+}
+div {
+    width: 1000px;
+    margin: auto;
+}
+body {
+    margin-top: 75px;
+    background-color: #c0b89b;
+}
+div.sub {
+    padding-left: 25px;
+    color: #7c7f82;
+}
