@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>About Me</title>
+  </head>
+  <center>
+  <div style="width:5in">
+    <body>
+      <h1> <center> About Me: <br/> Aidan Morris </center> </h1>
+	<p> I am a 16 year old student at Allen High School currently learning how to code and choose a career path.</p>
+	<p> I currently row for Dallas United Crew on White Rock lake; having started in the fall of 2021, we went to the 2022 Spring Nationals. Being a part of the team has taught me dicipline while building my mental and physical strength. For my interests, I love anything technology and science. Recently, I have been printing small machines with my 3D printer and designing various parts for problems around the house. A few weeks ago I also purchased an old large Sony Trinitron CRT television. After some tweaks to the TV I like to play games such as Super Smash Brother Melee on a homebrewed Nintendo Wii. </p>
+    </body>
+  </div>
+  </center>
+  <a href="./index.html"><h6>go back</h6></a>
+</html>
