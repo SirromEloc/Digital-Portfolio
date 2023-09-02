@@ -1,0 +1,35 @@
+{
+  "": {
+    "swift-dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/master.swiftdeps"
+  },
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/bubbleSort.swift": {
+    "dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/bubbleSort.d",
+    "object": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/bubbleSort.swift.o",
+    "swiftmodule": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/bubbleSort~partial.swiftmodule",
+    "swift-dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/bubbleSort.swiftdeps"
+  },
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/main.swift": {
+    "dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main.d",
+    "object": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main.swift.o",
+    "swiftmodule": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main~partial.swiftmodule",
+    "swift-dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main.swiftdeps"
+  },
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/primes.swift": {
+    "dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/primes.d",
+    "object": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/primes.swift.o",
+    "swiftmodule": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/primes~partial.swiftmodule",
+    "swift-dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/primes.swiftdeps"
+  },
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/retry.swift": {
+    "dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/retry.d",
+    "object": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/retry.swift.o",
+    "swiftmodule": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/retry~partial.swiftmodule",
+    "swift-dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/retry.swiftdeps"
+  },
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/swap.swift": {
+    "dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/swap.d",
+    "object": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/swap.swift.o",
+    "swiftmodule": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/swap~partial.swiftmodule",
+    "swift-dependencies": "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/swap.swiftdeps"
+  }
+}

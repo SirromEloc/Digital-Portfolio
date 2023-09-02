@@ -1,0 +1,10 @@
+version: "Swift version 5.8.1 (swift-5.8.1-RELEASE)"
+options: "b23262cec659d7fdc313c0f9c871cebf73ac574ca8b89856963d5877efabd24c"
+build_start_time: [1692386502, 194472000]
+build_end_time: [1692386502, 814000000]
+inputs:
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/bubbleSort.swift": [1692385479, 0]
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/main.swift": [1692386497, 0]
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/primes.swift": [1692386414, 0]
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/retry.swift": [1692385589, 0]
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/swap.swift": [1692214570, 0]

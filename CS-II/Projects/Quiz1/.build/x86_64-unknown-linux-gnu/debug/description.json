@@ -1,0 +1,160 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.Simple-debug.module" : {
+      "executable" : "/usr/bin/swiftc",
+      "importPath" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/bubbleSort.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/primes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/retry.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/swap.swift"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "Simple",
+      "moduleOutputPath" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule",
+      "objects" : [
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/bubbleSort.swift.o",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main.swift.o",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/primes.swift.o",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/retry.swift.o",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/swap.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-swift-version",
+        "5",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-g",
+        "-j16",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-color-diagnostics"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/bubbleSort.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/primes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/retry.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/swap.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build/Simple.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/bubbleSort.swift",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/main.swift",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/primes.swift",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/retry.swift",
+        "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/swap.swift"
+      ],
+      "tempsPath" : "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/Simple.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "Simple" : [
+      "/usr/bin/swiftc",
+      "-module-name",
+      "Simple",
+      "-incremental",
+      "-c",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/bubbleSort.swift",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/main.swift",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/primes.swift",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/retry.swift",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/swap.swift",
+      "-I",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-swift-version",
+      "5",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-g",
+      "-j16",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-color-diagnostics",
+      "-driver-use-frontend-path",
+      "/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "Simple" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  }
+}

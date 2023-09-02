@@ -1,0 +1,6 @@
+version: "Swift version 5.8.1 (swift-5.8.1-RELEASE)"
+options: "b23262cec659d7fdc313c0f9c871cebf73ac574ca8b89856963d5877efabd24c"
+build_start_time: [1692043789, 665040000]
+build_end_time: [1692043790, 961301000]
+inputs:
+  "/home/aidan-morris/Digital Portfolio/CS-II/Projects/Quiz1/main.swift": !private [1692043780, 0]

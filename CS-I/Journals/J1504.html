@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../../styles.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h2>
+Name: Aidan Morris <br/>
+Journal: J1504 <br/>
+Date: 4/5/2023<br/>
+    </h2>
+    <p class="credit">
+I received assistance from: NO ONE <br/>
+I assisted: NO ONE
+    </p>  
+    <p>
+      1.1: What do you observe? <br/>
+      A curved black line
+    </p> <p>
+      1.2: What is the purpose of the parameters startAngle and endAngle?<br/>
+      State what arc of a circle will drawn in radians
+    </p> <p>
+      1.3: In which direction do you think the arc is being drawn (clockwise or counterclockwise)?<br/>
+      Drawn Clockwise (just makes more sense I think)
+    </p> <p>
+      1.4: How can you test your hypothesis?<br/>
+      Editing the start and end angles and seeing which side of the arc is effected
+    </p> <p>
+      2.1: What do you observe? <br/>
+      An eye shaped outline
+    </p> <p>
+      2.2: Note that there is only a single canvas.render() statement. How does this single statement result in the rendering of two arcs?<br/>
+      The .arc primitive adds to the original object and the render statement renders the whole object
+    </p> <p>
+      3.1: What do you observe?<br/>
+      The eye outline is now colored on the inside
+    </p> <p>
+      3.2: Which line number determines whether or not this Path is filled?<br/>
+      Line 10 that renders the path also determines if it is colored in by rendering the outerFillColor rule before rendering the path
+    </p> <p>
+      4.1: What do you observe?<br/>
+      The eye image now has a iris
+    </p> <p>
+      4.2: The outerPath contains two arcs and each specifies a startAngle and endAngle. These angles aren't specified explicitly for the innerPath. What are the default angles in this case?<br/>
+      The default angles would be 0 and 2pi, or about 6.28, or the full circle
+    </p> <p>
+      5.1: What do you observe?<br/>
+      There are now 2 lashes on the eye
+    </p> <p>
+      5.2: Is a path necessarily constructed of a single, continuous line?<br/>
+      No, not always continuous, but as far as the computer knows, they are in the same object
+    </p> <p>
+      What did I learn? What is the "big idea"?<br/>
+      Arcs can be drawn as part circles, and combined to create more complex shapes
+    </p> <p>
+      What challenges did I encounter?<br/>
+      Understanding the start and end angles are in radians, and that the arc was even being created from a circle
+    </p> <p>
+      How could this experience be improved?<br/>
+      Purhapse having a grid being displayed as well to understand exactly where the coordinates are and how they relate to the arc
+    </p> <p>
+      Free Reflection: How has what I've learned affected my thinking?<br/>
+      Multiple arcs being apart of the same object, yet discontinuous has me wondering how the computer processes the code, and what situations will things like filling in color work
+    </p>
+  </body>
+</html>

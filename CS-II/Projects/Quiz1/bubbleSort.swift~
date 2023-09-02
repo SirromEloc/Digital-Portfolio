@@ -1,0 +1,15 @@
+func bubbleSort(_ array: inout [Int]) {
+    precondition(array.count > 1, "Array too small to sort")
+    var didSwap: Bool
+    repeat {
+        didSwap = false
+        for index in 1 ..< array.count {
+            let leftIndex = index - 1
+            if array[leftIndex] > array[index] {
+                swap(&array, leftIndex, index)
+                didSwap = true
+                //print("swaped indices " + String(index) + ":" + String(index + 1))
+            }
+        }
+    } while didSwap
+}

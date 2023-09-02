@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../../../styles.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h2>
+Name: Aidan Morris <br/>
+Journal: J1017 <br/>
+Date: 10/13/22 <br/>
+    </h2>
+    <p class="credit">
+I received assistance from: NO ONE <br/>
+I assisted: NO ONE
+    </p>  
+    <p>
+      1.1: What truth table do you recognize that produces the output of the Carry column?<br/>
+Truth table with both variables with the value of 1
+    </p> <p>
+      1.2: What truth table do you recognize that produces the output of the Sum column?<br/>
+Truth table with one variable or the other with a value of 1
+    </p> <p>
+      2.1: What do you notice about the relationship between the first-half (top four rows) of the full-adder as compared to all of the rows of the half-adder?<br/>
+The first 4 rows of the full adder are the exact same as the half-adder
+    </p> <p>
+      2.2: Why is this true?<br/>
+The C-input variable has a value of 0 for these first 4 rows
+    </p> <p>
+      3.1: Why does the least significant bit position use a half-adder rather than a full-adder?<br/>
+Because there is no lower level adder that would provide a carry-over value, so there would be difference between a full and half-adder
+    </p> <p>
+      3.2: Assume that proper inputs are applied for all bits in numbers A and B. Will the correct output from S be available instantaneously? If not, why not?<br/>
+Of course the output is not instantaneous as each circuit takes a miniscule amount of time to operate, but if A and B is provided the adder must also require the carry-input from the lesser significant bit position, if existant, to ensure the S output is correct
+    </p> <p>
+      3.3: Assume that we have a standard (non-scientific calculator) capable of adding two 16-bit words. Two numbers, A and B, are added together. After the addition, it is noted that "C-15" is high. What can we infer? What is this state commonly called?<br/>
+The sum of the 2 numbers is larger than 16 bits. This is called an integer overflow
+    </p> <p>
+      What did I learn? What is the "big idea"?<br/>
+      How basic gate half-adders and full-adders operate, and specifically their differences.
+    </p> <p>
+      What challenges did I encounter?<br/>
+      At first I failed to realize that both A and B would come from 2 different numbers, just at the same base position
+    </p> <p>
+      How could this experience be improved?<br/>
+      An interactable bit adder would help understand how the carry over effects a large operation
+    </p> <p>
+      Free Reflection: How has what I've learned affected my thinking?<br/>
+      really displays how each bit on a computer is physically manipulated to perform an action on a computer
+    </p>
+    <a href="https://tinyurl.com/2aa69y5t"><img src="bit-adders.png" alt="Half-Adder and Full-Adder created by me"> </a> <br/>
+    <p>
+      <a href="https://tinyurl.com/2aa69y5t"> Link to Circuit</a>
+      or
+      <a href="./bit-adders.circuitjs.txt" download> Download Circuit File </a>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+func isPrime(_ num: Int) -> Bool {
+    precondition(num > 1, "number must be greater than 1 to check for prime")
+    var divisor = 2
+    while divisor <= (num / 2) {
+        if num % divisor == 0 {
+            return false
+        }
+        divisor += 1
+    }
+    return true
+}
+
+func nextPrime(_ num: Int) -> Int {
+    var checkNum = num
+    while true {
+        checkNum += 1
+        if isPrime(checkNum) {
+            return checkNum
+        }
+    }
+}
+
+func previousPrime(_ num: Int) -> Int {
+    precondition(num > 2, "function requires that num be greater than 2")
+    var checkNum = num 
+    while true {
+        checkNum -= 1
+        if isPrime(checkNum) {
+            return checkNum
+        }
+    }
+}
