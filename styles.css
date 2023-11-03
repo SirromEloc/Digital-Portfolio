@@ -1,12 +1,9 @@
 h1 { 
-    color: #31353f;
-}
-h2 {
-    color: #7c7f82;
-    font-weight: bold;
+    color: #11201f;
 }
 .credit {
-    color: #f4f5f4;
+    font-style:italic;
+    color: #444544;
 }
 div {
     width: 1000px;
@@ -18,5 +15,5 @@ body {
 }
 div.sub {
     padding-left: 25px;
-    color: #7c7f82;
+    color: #323332;
 }
