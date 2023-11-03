@@ -1,0 +1,91 @@
+\documentclass{article}
+\title{The Odd Questions of Chapter 2}
+\author{Aidan Morris}
+\date{September 11, 2023}
+\marginparwidth = 35pt
+
+\usepackage{amsmath}
+\usepackage{txfonts}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+\section*{2.1: How we have it defined, is -1 a negative number?}
+\begin{align*}
+  2k+1 &= n \\
+  2k+1 &= -1 \\
+  2k &= -2 \\
+  k &= -1 
+\end{align*}
+We can get -1 as a negative number when k = -1 \\
+\section*{2.3: If m \& n are odd, prove mn is odd} 
+m = (2a+1); \:  n = (2b+1); \: c, d $\in \mathbb{Z}$
+\begin{align*} 
+2k + 1 &= (2a+1)(2b+1) \\
+2k + 1 &= 4ab + 2a + 2b +1 \\
+2k + 1 &= 2(2ab + a + b) + 1 \\
+k &= (2ab + a + b) 
+\end{align*} 
+mn is an odd number when its k is equal to the integer (2ab + a + b) \\
+\section*{2.5: Prove that $\sqrt[3]{2}$ is irrational} 
+Every rational number can be written as a simplified fraction $\frac{a}{b}$ \\
+
+\begin{align*}
+\sqrt[3]{2} &= \frac{a}{b} \\
+\sqrt[3]{2} b &= a \\
+2b^3 &= a^3 \\
+2b^3 &= (2k)^3 \\
+2b^3 &= 8k^3 \\
+b^3 &= 4k^3  \\
+(2j)^3 &= 4k^3 \\
+&\downarrow  
+\end{align*}
+Both a \& b were proven to be even (line 3 and line 6), meaning the fraction was not simplified and $\sqrt[3]{2}$ must be irrational. Also, the reduction of the problem can continue forever\\
+\section*{2.7: Prove that a fair 7-sided dice is possible} 
+A dices' chances rely on the area of each side. \\
+For a pentagonal prism, there must be some lateral length where the 5 rectangular sides each have an area equal to the area of the pentagon bases \\
+\section*{2.9:}
+\subsection*{a: Prove or provide counterexample: if c \& d are perfect squares, then so is cd}
+c = x * x; \: d = y * y; \: c, d $\in \mathbb{Z}$ \\
+\begin{align*}
+  c * d &= cd \\
+  (x * x) * (y * y) &= cd \\
+  xy * xy &= cd
+\end{align*}
+So cd must be a perfect square such that its square root is equal to xy
+\subsection*{b: Prove or provide counterexample: if cd is a perfect square and c $\neq$ d, then c \& d are perfect squares}
+False, counterexample if cd = 36, c = 3, \& d = 12. 36 is a perfect square but c \& d are not
+\subsection*{c: Prove or provide counterexample: if c \& d are perfect squares such that $c > d$, $x^2 = c$, and $y^2 = d$, then $x > y$}
+\begin{align*}
+  c &> d \\
+  \sqrt{c} &> \sqrt{d} \\
+  x &> y
+\end{align*}
+\section*{2.11: Critique the following ``proof''}
+\begin{align*}
+x &> y \\
+x^2 &> y^2 \\
+x^2 - y^2 &> 0 \\
+(x+y)(x-y) &> 0 \\
+x + y &> 0 \\
+x &> -y
+\end{align*}
+There is no mathematical operation to go from step 4 to step 5 \\
+\section*{2.13: Write the following statements in terms of quantifiers and implications}
+\subsection*{a: Every positive real number has two distinct square roots}
+$\forall n, n \in \mathbb{R}, n > 0 \implies \exists a, b \in \mathbb{R}: a^2 = n \land b^2 = n \land a \neq b$
+\subsection*{b: Every positive even number can be expressed as the sum of two prime numbers.}
+$\forall n, n \in \mathbb{N}, 2 \mid n \implies \exists p_1, p_2 \in \mathbb{N}: n = p_1 + p_2 \land 2, 3, ..., p_1-1 \nmid p_1 \land 2, 3, ..., p_2-1 \nmid p_2$
+\section*{2.15: In a group of 6 people, there must be at least 3 whom 1 person, X, knows, or at least 3 whom X does not know}
+This statement strongly reflects the pigeonhole principal. \\
+The principal states that when mapping set X on to set Y, the expression $\lceil \frac{|X|}{|Y|} \rceil$ can be used to find the minimum amount of X members that share members of Y. \\
+There are 2 categories of people and 5 people who must be sorted. \\
+\begin{center}
+  $\lceil \frac{|X|}{|Y|} \rceil$ \\
+  $\lceil \frac{5}{2} \rceil$ \\
+  $\lceil 2.5 \rceil$ \\
+  3
+\end{center}
+There must be atleast 3 people who are sorted into the categories, known or unknown
+\end{document}

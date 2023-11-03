@@ -1,0 +1,37 @@
+\documentclass{article}
+\title{The Odd Questions of Chapter 6}
+\author{Aidan Morris}
+\date{October 25, 2023}
+\marginparwidth = 35pt
+
+\usepackage{amsmath}
+\usepackage{txfonts}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\section*{6.1: Let $f$ be any function. Suppose that the inverse relation $f^{-1} = \{\langle y,x \rangle : y = f(x) \}$ is a function. Is $f^{-1}$ a bijection?}
+Yes, it is a bijection because every ordered pair will have an inverse pair and no 2 ordered pairs will share an inverse unless they themselves where the same pair.\\
+If $f^{-1}$ was not injective then more than one y maps to a singular x, which is not possible because $f$ is a function. If $f^-1$ was not surjective then no y would map to an x, which is not possible beceause $f$ is a function.
+\section*{6.3:}
+\subsection*{a: If 2 finite sets $A$ and $B$ are the same size and $r$ is an injective function from $A$ to $B$, show that $r$ is also surjective:}
+Injective means that the codomain has a element for atleast every element of the domain;|B| >= |A|. If the sets must be the same size then we know there are not any extra elements in the codomain so the function must also be surjective.
+
+\subsection*{b: Give a counterexample showing part (a) does not necessarily hold if the sets are bijectively related infinite sets:}
+Suppose we have a square root function that relates a set of all perfect squares to a set of every real number. The function may seem bijective as each perfect square has a distinct integer (injective) and both sets have a cardinality of infinite, but there are numbers in the second set that cannot be mapped to, so the function is not surjective.
+\section*{6.5: Suppose $f: A \mapsto B, g: C \mapsto D$, and $A \subseteq D$. Explain when $(f \circ g)^{-1}$ exists as a function from a subset of $B$ to $C$. and express it in terms of $f^{-1}$ and $g^{-1}$}
+$(f \circ g)$ goes from $C \mapsto A \mapsto B$ so $(f \circ g)^{-1}$ must go from $B \mapsto A \mapsto C$. Expressed in proper notation starting from a subset of $B$ it would be $g^{-1}(f^{-1}(B'))$. This only represents a function though when functions $f$ and $g$ are injetive so they're inverses remain functions. $g$ may be surjective but $f$ may not as extra elements must in $B$ so that the inverse of its subset may map to the entire set $A$.
+
+\section*{6.7: The function $f(n) = 2n$ is a bijection from $\mathbb{Z}$ to the even integers and the function $g(n) = 2n + 1$ is a bijection from $\mathbb{Z}$ to the odd integers. What are $f^{-1}, g^{-1}$ and the function $h$ of Theorem 6.4?}
+\begin{align*}
+  f^{-1} &= \frac{1}{2}n \\
+  g^{-1} &= \frac{n-1}{2} \\
+  \\
+  h(n) &= g^{-1}(f^{-1}(n)) \\
+  &= g^{-1}(\frac{1}{2}n) \\
+  &= \frac{\frac{1}{2}n - 1}{2} \\
+  &= \frac{n-2}{4}
+\end{align*}
+\end{document}

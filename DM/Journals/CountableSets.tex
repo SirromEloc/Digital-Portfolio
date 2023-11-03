@@ -1,0 +1,66 @@
+\documentclass{article}
+\title{The Odd Questions of Chapter 7}
+\author{Aidan Morris}
+\date{November 1, 2023}
+\marginparwidth = 35pt
+
+\usepackage{amsmath}
+\usepackage{txfonts}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\section*{7.1: Prove that there are infinite many different sizes of infinite sets:}
+Sets are the same size if there is a bijection between them. As proven in Theorem 7.6, a powerset has no bijection with its base. As you may put a countable infinity into the powerset function to receive an uncountable infinity, you may continue to recursively get the powerset of the previously created infinite powerset forever. Hence there are an infinite amount of unequal infinities.
+
+\section*{7.3: Could you invalidate theorem 7.4 (in the book) by shifting each $S_i$ up by one, and placing $D$ at the new empty $S_0$ spot.}
+
+No, because after $D$ has been placed in the $0th$ index, the diagonalization argument may be applied once again and a new set will be created which is unique to every other.
+
+\section*{7.5: Are following are possible?}
+\subsection*{a) The set difference of two uncountable sets is countable.}
+Yes, suppose we have a set $A = \mathcal{P}(\mathbb(N))$ and then set $B = A/\{1\}$. Both sets would be uncountably infinite, but $A/B$ would equal only $\{1\}$
+\subsection*{b) The set difference of two countably infinite sets is countably infinite.}
+Yes, example $\mathbb{Z}/\mathbb{N}$
+\subsection*{c) The power set of a countable set is countable.}
+Yes, example $A = \{1\}$, then $\mathcal{P}(A) = \{\emptyset,\{1\}\}$
+\subsection*{d) The union of a collection of finite sets is countably infinite.}
+Yes if the collection of sets is countably infinite. Example there are sets each with a singular natural number, their union would simply be $\mathbb{N}$.
+\subsection*{e) The union of a collection of finite sets is uncountable.}
+No, because you could always order the result of the union lexicographically and count 
+\subsection*{f) The intersection of two uncountable sets is empty}
+Yes, an intersection of a set of all real numbers between 0 - 1 and all real numbers between 2 - 3 would result an empty set.
+
+\section*{7.7:}
+\subsection*{a) Show that there are as many ordered pairs of reals between 0 and 1 as there are reals in that interval.}
+First off there is an uncountable amount of reals between 0 - 1. This can be shown through diagonalization similarly to Theorem 7.4. You can always create a new real number by incrementing each $ith$ decimal place of $r_i$ by 1. In turn, the amount of ordered pairs of the uncountably infinite number of reals would also be uncountably infinite. 
+\subsection*{b) extent part (a) to give a bijection between ordered pairs of nonnegative real numbers and nonnegative real numbers.}
+All nonnegative real numbers would, like the real numbers 0 - 1, would be an uncountable amount. For the exact same reasons as (a), the ordered pairs would be equally uncountable. The range of the real numbers is irrelevent to the true size of the infinite. 
+
+\section*{7.9: State whether each of the following sets are finite, countably infinite, or uncountably infinite}
+
+\subsection*{a) The set of all books, where a “book” is a finite sequence of uppercase and lowercase Roman letters, Ar bic numerals, the space symbol, and these 11 punctuation marks: ;,.’:—()!?“}
+Countably infinite as you can always create a longer book to differentiate from previous ones. They can be counted lexicographically
+\subsection*{b) The set of all books of less than 500, 000 symbols.}
+Finite, as the amount of books can be calculated to a number
+\subsection*{c) The set of all finite sets of books.}
+Countably infinite as you can always create a set of books with one more distinct book in it. The sets can be ordered by length and counted
+\subsection*{d) The set of all irrational numbers greater than 0 and less than 1.}
+Uncountably infinite as I explained in 7.7(a) with real numbers. Also by definition irrational numbers cannot be represented as a fraction, so they cannot be enumerated.
+\subsection*{e) The set of all sets of numbers that are divisible by 17.}
+Uncountably infinite. There are a countably infinite amount of numbers divisible by 17 (represented as 17N where N is a natural number that can also be used to enumerate it). Similar to Theorem 7.4, whether one of these numbers is included in a set can by a characteristic function. You can now use the diagonalization argument to prove the larger set can gain distinct member sets.
+\subsection*{f) The set of all sets of even prime numbers.}
+Finite, the only even prime number is 2. the set of all sets of even prime numbers would be \{\{2\}\}
+\subsection*{g) The set of all sets of powers of 2.}
+Uncountably infinite. For the same reasons as 7.9(e). This is because there are a countably infinite number of powers of 2. (all powers of 2 can be represented as $2^N$, where $N$ is a natural number and can also be used to enumerate it)
+\subsection*{h) The set of all functions from Q to {0, 1}.}
+Uncountably infinite. Mapping from an infinite set will always have an uncountably infinite number of fuctions. There is an infinite amount of calculations that you may do to an infinite amount of numbers. Mirroring Theorem 7.4 you can always create another set of answers of the mapping through diagonalization, and thus another function
+\section*{7.11: Prove Theorem 7.3}
+``The union of countably many countably infinite sets is countably infinite'' \\
+If the union of the sets was not countably infinite then it would be either finite or uncountably infinite \\
+Finite Case: A union cannot remove elements a set, and all infinite sets are larger than all finite sets.\\
+Uncountably infinite case: then there must not be a bijection from the countably infinite sets to the union. This is contradictory as all countably infinite sets are bijective so their union must be as well.
+
+\end{document}

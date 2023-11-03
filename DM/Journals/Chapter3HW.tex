@@ -1,0 +1,147 @@
+\documentclass{article}
+\title{The Odd Questions of Chapter 3}
+\author{Aidan Morris}
+\date{September 21, 2023}
+\marginparwidth = 35pt
+
+\usepackage{amsmath}
+\usepackage{txfonts}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\section*{3.1: Find a closed form expression for the following expression}
+\begin{equation}
+    \sum_{i=0}^{n-1} (2i + 1)
+\end{equation}
+This equation represents the sum of the first $n$ odd integers. Let's look at a couple answers 
+\begin{align*}
+\sum_{i=0}^{1-1} (2i + 1) &= (2(0) + 1) = 1 \\
+\sum_{i=0}^{2-1} (2i + 1) &= (2(0) + 1) + (2(1) + 1) = 1 + 3 = 4 \\
+\sum_{i=0}^{4-1} (2i + 1) &= (2(0) + 1) + (2(1) + 1) + (2(2) + 1) + (2(3) + 1) = 1 + 3 + 5 + 7 = 16 
+\end{align*}
+Each of these answers look like perfect squares. Let's conjecture that:
+\begin{equation}
+    \sum_{i=0}^{n-1} (2i + 1) = n^2
+\end{equation}
+Now let's prove induction. We know that the equations match when $n = 0$ as $0 - 1$ results in a value less than the begining value of $i$, which by convention is 0. Now $n + 1$ must be proven
+\begin{align*}
+  \sum_{i=0}^{(n+1)-1} (2i + 1) &= \sum_{i=0}^{n} (2i + 1) &\\
+  &= \sum_{i=0}^{n-1} (2i + 1) + (2n + 1) &\textrm{(breaking off last term)} \\
+  &= (n^2) + (2n + 1) &\textrm{(by induction hypothesis)} \\
+  &= n^2 + 2n + 1 &\\
+  &= (n+1)^2 &\textrm{(factoring)}
+\end{align*}
+Proven to simplify exactly to conjectured $(n+1)^2$
+\section*{3.3: Prove the Extended Pigeonhole Principal by induction on $|Y|$}
+The Extended Pigeonhole Principal can be written as...
+\begin{center}
+  if $|X| > |Y| * k$ then there are $k + 1$ members of $X$ that share at least 1 member of $Y$, or that $k = \lceil \frac{|X|}{|Y|} \rceil - 1$ 
+\end{center}
+Base Case:
+\begin{align*}
+  |X| &> 1 * k \\
+  \frac{|X|}{1} &> k \\
+  \frac{|X|}{1} &> \lceil \frac{|X|}{1} \rceil - 1 & \textrm{(by induction hypothesis)} 
+\end{align*}
+This must be true as a ceiling function may never raise the value by 1 or more, so subtracting 1 will always result in a smaller number than the original fraction \\
+Induction Case:
+\begin{align*}
+  |X| &> (|Y| + 1) * k \\
+  \frac{|X|}{|Y| + 1} &> k \\
+  \frac{|X|}{|Y| + 1} &> \lceil \frac{|X|}{|Y| + 1} \rceil - 1 & \textrm{(by induction hypothesis)}
+\end{align*}
+This must be true for the same reason as the base case.
+\section*{3.5: Prove the following by induction that for any $n \geq 0$, ...}
+\begin{equation}
+  \sum_{i=0}^n i^2 = \frac{n(n+1)(2n+1)}{6}
+\end{equation}
+Base Case:
+\begin{equation}
+  \sum_{i=0}^0 i^2 = 0^2 = 0 \\
+  \frac{0(0+1)(2(0)+1)}{6} = \frac{0(1)(1)}{6} = \frac{0}{6} = 0
+\end{equation}
+Both sides equal 0 in the base case\\
+Induction Case: \\
+First, let's rewrite the right half of the equation with (n+1)
+\begin{align*}
+  \frac{(n+1)((n+1)+1)(2(n+1)+1)}{6} &= \\
+  \frac{(n+1)(n+2)(2n+3)}{6} &= \frac{2n^3+9n^2+13n+6}{6}
+\end{align*}
+This is determined by simplifying and multiplying the terms together
+Now, let's rewrite the left half of the equation with (n+1)
+\begin{align*}
+  \sum_{i=0}^{n+1} (2i + 1) &= \\
+  \sum_{i=0}^{n+1} (2i + 1) &= \sum_{i=0}^{n} (2i + 1) + (n+1)^2 &\textrm{(breaking off last term)} \\
+  &= \frac{n(n+1)(2n+1)}{6} + (n+1)^2 &\textrm{(by induction hypothesis)} \\
+  &= \frac{2n^3+3n^2+n}{6} + (n+1)^2 &\\
+  &= \frac{2n^3+3n^2+n}{6} + (n^2+2n+1) &\\
+  &= \frac{2n^3+3n^2+n}{6} + \frac{6n^2+12n+6)}{6} &\\
+  &= \frac{2n^3+9n^2+13n+6}{6}
+\end{align*}
+Now if we compare the final results for both halfs, they are equivalent
+\section*{3.7: Prove the following by induction that for any $n \geq 0$, ...}
+\begin{equation}
+  \sum_{i=0}^n i^3 = (\sum_{i=0}^n i)^2
+\end{equation}
+Base Case:
+\begin{equation}
+  \sum_{i=0}^0 i^3 = 0^3 = 0 \\
+  (\sum_{i=0}^0 i)^2 = (0)^2 = 0 
+\end{equation}
+Both sides equal to 0 in the base case
+Induction Case: \\
+First, let's rewrite $\sum_{i=0}^n i$ to equal $\frac{n(n+1)}{2}$ which can be proven by induction here
+\begin{align*}
+  \sum_{i=0}^{n+1} i &= \\
+  \sum_{i=0}^{n+1} i &= \sum_{i=0}^{n} + (n+1) \\
+   &= \frac{n(n+1)}{2} + (n+1) &\textrm{(by induction hypothesis)} \\
+  &= \frac{n^2+n}{2} + (n+1) \\
+   &= \frac{n^2+n}{2} + \frac{2n+2}{2} \\
+   &= \frac{n^2+3n+2}{2} \\
+  &\textrm{and} \\
+  \frac{(n+1)^2+(n+1)}{2} &= \frac{(n^2+2n+1) + (n+1}{2} \\
+  &= \frac{n^2+3n+2}{2}
+\end{align*}
+Now, let's rewrite $\sum_{i=0}^n i^3$ to equal $\frac{n^2(n^2+2n+1)}{4}$ which can be proven by induction here
+\begin{align*}
+  \sum_{i=0}^{n+1} i^3 &= \\
+  \sum_{i=0}^{n+1} i^3 &= \sum_{i=0}^{n} i^3 + (n+1)^3 \\
+  &= \frac{n^2(n^2+2n+1)}{4} + (n+1)^3 &\textrm{(by induction hypothesis)} \\
+  &= \frac{n^4+2n^3+n^2}{4} + (n+1)^3 \\
+  &= \frac{n^4+2n^3+n^2}{4} + (n^3+3n^2+3n+1) \\
+  &= \frac{n^4+2n^3+n^2}{4} + \frac{(4n^3+12n^2+12n+4)}{4} \\
+  &= \frac{n^4+6n^3+13n^2+12n+4}{4} \\
+  &\textrm{and} \\
+  \frac{(n+1)^2((n+1)^2+2(n+1)+1)}{4} &= \frac{(n+1)^2((n+1)^2+2n+3)}{4} \\
+  &= \frac{(n^2+2n+1)((n+1)^2+2n+3)}{4} \\
+  &= \frac{(n^2+2n+1)((n^2+2n+1)+2n+3)}{4} \\
+  &= \frac{(n^2+2n+1)(n^2+4n+4)}{4} \\
+  &= \frac{n^4+6n^3+13n^2+12n+4}{4}
+\end{align*}
+So now it must be proven that $\frac{n^2(n^2+2n+1)}{4} = (\frac{n(n+1)}{2})^2$:
+\begin{align*}
+  \sum_{i=0}^n i^3 &= (\sum_{i=0}^n i)^2 \\
+  \frac{n^2(n^2+2n+1)}{4} &= (\frac{n(n+1)}{2})^2 &\textrm{(by proven equivalence)} \\
+  \frac{n^2(n^2+2n+1)}{4} &= (\frac{n^2(n+1)^2}{2^2}) \\
+  \frac{n^2(n^2+2n+1)}{4} &= (\frac{n^2(n^2+2n+1)}{4}
+\end{align*}
+\section*{3.9: What is the flaw in the proof, ``All Horses are the Same Color''}
+There is no mathematical or logical process which proves that the horses in a set truly are the same color, the proof relies on its own singular assumption to prove itself
+\section*{3.11: Prove the following about the Thue Sequence}
+\subsection*{a) For every $n \geq 1$, $T_{2n}$ is a palindrome}
+
+\emph{Base case} $n = 1$, $2n = 2$, $T_2 = 0110$. $T_2n$ reads the same both directions\\
+
+\emph{Induction hypothesis} Fix $n \geq 1$, and assume that $T_2n$ is a palindrome\\
+
+\emph{Induction step} $T_{2(n+1)}$ becomes $T_2n+2$. Because $T_{n+1}$ concatonates $T_n$ and its compliment, the ending values take 2 iterations of n for the compliments to revert and create another palindrome. So, because $T_2n$ is a palindrome, so will $T_2n+2$
+\subsection*{b) For every $n$, if 0 is replaced by 01 and 1 is replaced by 10 simultaneously everywhere in $T_n$, the result is $T_{n+1}$}
+\emph{Base case} $n = 1$, $T_1 = 01$ and $T_2 = 0110$. $T_2$ could be created by replace $T_1$'s 0s with 01 and 1s with 10s\\
+
+\emph{Induction hypothesis} Assume that $T_{n+1}$ can be created by replacing $T_n$'s 0s and 1s with 01s and 10s respectively \\
+
+\emph{Induction step} $T_{n+1}$ takes the complementary bits from $T_n$ and $T_{n-1}$ the same, all the way down to $T_0$. This self iterative process is no different from repeating the steps from $T_0$ to $T_1$ over and over. Replacing the 0s and 1s with 01s and 10s is just breaking the sequence into small $T_0$ chunks and adding their complements back.
+\end{document}

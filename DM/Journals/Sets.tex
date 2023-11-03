@@ -1,0 +1,68 @@
+\documentclass{article}
+\title{The Odd Questions of Chapter 5}
+\author{Aidan Morris}
+\date{October 25, 2023}
+\marginparwidth = 35pt
+
+\usepackage{amsmath}
+\usepackage{txfonts}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\section*{5.1: What are the resulting sets?}
+\subsection*{a: $\{\{2,4,6\}\cup\{6,4\}\}\cap\{4,6,8\}$}
+Set = \{4,6\}
+\subsection*{b: $\mathcal{P}(\{7,8,9\}) - \mathcal{P}(\{7,9\}) $}
+Set = \{\{8\}, \{7,8\}, \{7,8,9\}, \{8,9\}\}
+\subsection*{c: $\mathcal{P}(\emptyset)$}
+Set = $\{\emptyset\}$
+\subsection*{d: $\{1,3,5\} \times \{0\}$}
+Set = $\{\langle1,0\rangle, \langle3,0\rangle, \langle5,0\rangle\}$
+\subsection*{e: $\{2,4,6\} \times \emptyset$}
+Set = $\emptyset$
+\subsection*{f: $\mathcal{P}(\{0\}) \times \mathcal{P}(\{1\})$}
+Set = $\{\langle\emptyset,\emptyset\rangle, \langle\emptyset, \{1\}\rangle, \langle \{0\},\emptyset \rangle, \langle \{0\},\{1\} \rangle \}$
+\subsection*{g: $\mathcal{P}(\mathcal{P}({2}))$}
+Set = $\{\emptyset,\{\emptyset,\{2\}\}, \{\emptyset\}, \{\{2\}\}\}$
+\section*{5.3: Show that if $A$ is a finite set with $|A| = n$, then $|\mathcal{P}(A)| = 2^{|A|}$}
+When creating a powerset, each element is either included or not in any given nested set. This means the length is equal to $2^n$ where n is the number of starting elements. Here is an proof by induction: \\
+Base Case: when $n = 1$, the powerset will have 2 elements
+Induction Hypothesis: A powerset of a set will have $2^n$ elements
+\begin{align*}
+  |A| = n; \: |B| &= n + 1; \: |C| = 1\\
+  \mathcal{P}(B) &= \mathcal{P}(A) * \mathcal{P}(C) \\
+  &= \mathcal{P}(A) * 2 \: &\textrm{: by base case} \\
+  &= 2^n * 2 \: &\textrm{: by induction} \\
+  &= 2^{n+1}
+\end{align*}
+\section*{5.5: Consider the following}
+\subsection*{a: $A$ and $B$ are finite. Compare the $|\mathcal{P}(A \times B)|$ and $|\mathcal{P}(A)| * |\mathcal{P}(B)|$. When is one larger than the other, and what is their ratio?}
+As discussed in the previous problem, $|\mathcal{P}(A \times B)|$ can be simplified to $2^{|A| * |B|}$. Similarly $|\mathcal{P}(A)| * |\mathcal{P}(B)|$ can be simplified to $2^{|A|} * 2^{|B|}$ or $2^{|A|+|B|}$. This means the equations are equal when both $|A|$ and $|B|$ have the value of 2, the first equation is larger when either one or both are larger than 2, but the second equation is larger if either of the sets have a cardinality lesser than 2.
+\subsection*{b: Must it be true that $(A-B) \cap (B-A) = \emptyset$? Prove it or give a counter example.}
+Yes, it must be true as the subtraction find the differences within the sets (finding members that are in one but not the other) meaning it is impossible for a resulting member to be contained in both as signified by the $\cap$.
+
+\section*{5.7: Decide whether each statement is true or false and why: }
+\subsection*{a: $\emptyset == \{\emptyset\}$}
+False, because a set and a nested set are not the same thing
+\subsection*{b: $\emptyset == \{0\}$}
+False, because 0 is a value seperate from no value. $\emptyset = \{\}$ and $\{\} \neq \{0\}$
+\subsection*{c: $|\emptyset| == 0$}
+True, because an empty set has 0 elements
+\subsection*{d: $|\mathcal{P}| == 0$}
+False, because the power set has 1 member not 0, the member is just itself an empty set
+\subsection*{e: $\emptyset \in \{\}$}
+False, the set does not contain an empty set, it contains nothing. 
+\subsection*{f: $\emptyset == \{x \in \mathbb{N}: x \leq 0 \: \textrm{and} \: x > 0 \}$ }
+True, because there is no overlap between the two ranges. 
+\section*{5.9: Prove the following}
+\subsection*{a: $A \cap (A \cup B) == A$}
+The equation means that a member must be in set $A$ and set $A$ or $B$. The intersection undoes the union. Using an intersection of a subset and superset will always return the subset
+\subsection*{b: $A-(B \cap C) == (A-B) \cup (A-C)$}
+The left half says set A without where set B and C intersect, the right half says set A without B OR without C, meaning it results only set A without where B and C intersect.
+\section*{5.11: Let's define ordered pairs $\langle x,y \rangle$ to be $\{x,\{x,y\}\}$. Prove that $\langle x,y \rangle == \langle u,v \rangle $ if and only if $x==u$ and $y==v$}
+$\langle x,y \rangle = \{x\{x,y\}\}, \: \langle u,v \rangle = \{u,\{u,v\}\}$ \\
+$x = u$ and $y = v$ must be true because $\{x\{x,y\}\} = \{u,\{u,v\}\}$ only if it does.
+\end{document}
