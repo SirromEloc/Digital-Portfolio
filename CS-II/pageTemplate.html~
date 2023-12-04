@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../styles.css">
+    <meta charset="utf-8">
+    <title>Conspiracy Theories</title>
+  </head>
+  <body>
+    <div>
+      <h1>Algorithm Awareness & The Spread of Conspiracy Theories</h1>
+      <div class="sub">
+	<ul>
+	  <li><h3>The Basics of Recommendation Algorithms</h3></li>
+	  <p> slack</p>
+	  <li><h3>The Feedback Loop</h3></li>
+	  <p> thogu</p>
+	  <li><h3>Conspiracy Theories & Algorithmic Amplification</h3></li>
+	  <p> that</p>
+	  <li><h3>Platform Incentives</h3></li>
+	  <p>htis </p>
+	  <li><h3>Potential for Exploitation</h3></li>
+	  <p> THis</p>
+	</ul>
+      </div>
+  </body>
+</html>
