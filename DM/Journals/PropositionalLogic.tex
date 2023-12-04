@@ -1,0 +1,170 @@
+\documentclass{article}
+\title{The Odd Questions of Chapter 9}
+\author{Aidan Morris}
+\date{17 November, 2023}
+\marginparwidth = 35pt
+
+\usepackage{amsmath}
+\usepackage{txfonts}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\section*{9.1: Using just $\neg$ and $\lor$, rewrite the following equations}
+\subsection*{a: $p \land q$}
+$\neg(\neg p \lor \neg q)$
+\subsection*{b: $p \oplus q$}
+$\neg(\neg(p \lor q) \lor \neg(\neg p \lor \neg q))$
+\subsection*{c: $p \Leftrightarrow q$}
+$\neg p \lor q$
+\section*{9.3: Prove the associative laws by comparing truth tables for the following expressions}
+\subsection*{$(\alpha \lor \beta) \lor \gamma \equiv \alpha \lor (\beta \lor \gamma)$}
+\begin{displaymath}
+  \begin{array}{|c c c|c|c|c|c|}
+    \alpha & \beta & \gamma & (\alpha \lor \beta) & (\alpha \lor \beta) \lor \gamma & (\beta \lor \gamma) & \alpha \lor (\beta \lor \gamma)\\
+    \hline
+    0 & 0 & 0 & 0 & 0 & 0 & 0\\
+    0 & 0 & 1 & 0 & 1 & 1 & 1\\
+    0 & 1 & 0 & 1 & 1 & 1 & 1\\
+    0 & 1 & 1 & 1 & 1 & 1 & 1\\
+    1 & 0 & 0 & 1 & 1 & 0 & 1\\
+    1 & 0 & 1 & 1 & 1 & 1 & 1\\
+    1 & 1 & 0 & 1 & 1 & 1 & 1\\
+    1 & 1 & 1 & 1 & 1 & 1 & 1\\
+  \end{array}
+\end{displaymath}
+
+The 2nd and 4th columns are equivalent 
+\subsection*{$(\alpha \wedge \beta) \wedge \gamma \equiv \alpha \wedge (\beta \wedge \gamma)$}
+\begin{displaymath}
+  \begin{array}{|c c c|c|c|c|c|}
+    \alpha & \beta & \gamma & (\alpha \land \beta) & (\alpha \land \beta) \land \gamma & (\beta \land \gamma) & \alpha \land (\beta \land \gamma)\\
+    \hline
+    0 & 0 & 0 & 0 & 0 & 0 & 0\\
+    0 & 0 & 1 & 0 & 0 & 0 & 0\\
+    0 & 1 & 0 & 0 & 0 & 0 & 0\\
+    0 & 1 & 1 & 0 & 0 & 1 & 0\\
+    1 & 0 & 0 & 0 & 0 & 0 & 0\\
+    1 & 0 & 1 & 0 & 0 & 0 & 0\\
+    1 & 1 & 0 & 1 & 0 & 0 & 0\\
+    1 & 1 & 1 & 1 & 1 & 1 & 1\\
+  \end{array}
+\end{displaymath}
+
+The 2nd and 4th columns are equivalent
+
+\section*{9.5: With truth tables determine if the following propositions are satisfiable, a tautlogy, or unsatisfiable}
+
+\subsection*{a: $p \Rightarrow (p \vee q)$}
+\begin{displaymath}
+  \begin{array}{|c c|c|c|}
+    p & q & (p \lor q) & p \implies (p \lor q)\\
+    \hline
+    0 & 0 & 0 & 1\\
+    0 & 1 & 1 & 1\\
+    1 & 0 & 1 & 1\\
+    1 & 1 & 1 & 1\\
+  \end{array}
+\end{displaymath}
+
+$p \implies (p \lor q)$ is a tautalogy 
+\subsection*{b: $\neg (p \Rightarrow (p \vee q))$}
+\begin{displaymath}
+  \begin{array}{|c c|c|c|c|}
+    p & q & (p \lor q) & p \implies (p \lor q) & \neg(p \implies (p \lor q))\\
+    \hline
+    0 & 0 & 0 & 1 & 0\\
+    0 & 1 & 1 & 1 & 0\\
+    1 & 0 & 1 & 1 & 0\\
+    1 & 1 & 1 & 1 & 0\\
+  \end{array}
+\end{displaymath}
+
+$\neg(p \implies (p \lor q))$ is unsatisfiable
+\subsection*{c: $p \Rightarrow (p \Rightarrow q)$}
+\begin{displaymath}
+  \begin{array}{|c c|c|c|}
+    p & q & (p \implies q) & p \implies (p \implies q)\\
+    \hline
+    0 & 0 & 1 & 1\\
+    0 & 1 & 1 & 1\\
+    1 & 0 & 0 & 0\\
+    1 & 1 & 1 & 1\\
+  \end{array}
+\end{displaymath}
+
+$p \implies (p \implies q)$ is satisfiable
+\section*{9.7: Prove that $\alpha \equiv \beta$ iff $\alpha \Leftrightarrow \beta$ is a tautology}
+$\alpha \Leftrightarrow \beta$ checks that the values in $\alpha$ and $\beta$  are either both true or both false. If it results a tautology then it means the values are equivalent in all possible combinations. If it does not return a tautology, then atleast one combination of $\alpha$ and $\beta$ are not the same, and so then $\alpha$ and $\beta$ are not equivalent  
+\section*{9.9: Give a real world example of $p, q, r$ where $(p \wedge q) \Rightarrow r$ and $p \wedge (q \Rightarrow r)$ are not equivalent}
+Let's make the scenerio that where $p$ is happiness, $q$ is hungryness, and $r$ is if you went a restaurant. The first proposition would read ``If I am happy and hungry, then I will go to a restaurant'' while the second proposition says ``If I am hungry, I will go to a restaurant and I will be happy''. The propositions will not be equivalent any scenerio I am not happy
+\section*{9.11:}
+\subsection*{a: Write $p \Leftrightarrow q$ using $\oplus$ and the constant $T$}
+$p \oplus q \oplus T$
+\subsection*{b: Show that $\oplus$ and $\Leftrightarrow$ are associative}
+\begin{displaymath}
+  \begin{array}{|c c c|c|c|c|c|}
+    q & p & r & (q \oplus p) & (q \oplus p) \oplus r \\
+    \hline \\
+    0 & 0 & 0 & 0 & 0\\
+    0 & 0 & 1 & 0 & 1\\
+    0 & 1 & 0 & 1 & 1\\
+    0 & 1 & 1 & 1 & 0\\
+    1 & 0 & 0 & 1 & 1\\
+    1 & 0 & 1 & 1 & 0\\
+    1 & 1 & 0 & 0 & 0\\
+    1 & 1 & 1 & 0 & 1\\
+  \end{array}
+\end{displaymath}
+\begin{displaymath}
+  \begin{array}{|c c c|c|c|c|c|}
+    q & p & r & (p \oplus r) & q \oplus (p \oplus r) \\
+    \hline \\
+    0 & 0 & 0 & 0 & 0\\
+    0 & 0 & 1 & 1 & 1\\
+    0 & 1 & 0 & 1 & 1\\
+    0 & 1 & 1 & 0 & 0\\
+    1 & 0 & 0 & 0 & 1\\
+    1 & 0 & 1 & 1 & 0\\
+    1 & 1 & 0 & 1 & 0\\
+    1 & 1 & 1 & 0 & 1\\
+  \end{array}
+\end{displaymath}
+
+They have the same final result
+\begin{displaymath}
+  \begin{array}{|c c c|c|c|c|c|}
+    q & p & r & (q \Leftrightarrow p) & (q \Leftrightarrow p) \Leftrightarrow r \\
+    \hline \\
+    0 & 0 & 0 & 0 & 0\\
+    0 & 0 & 1 & 0 & 1\\
+    0 & 1 & 0 & 1 & 1\\
+    0 & 1 & 1 & 1 & 0\\
+    1 & 0 & 0 & 1 & 1\\
+    1 & 0 & 1 & 1 & 0\\
+    1 & 1 & 0 & 0 & 0\\
+    1 & 1 & 1 & 0 & 1\\
+  \end{array}
+\end{displaymath}
+\begin{displaymath}
+  \begin{array}{|c c c|c|c|c|c|}
+    q & p & r & (p \Leftrightarrow r) & q \Leftrightarrow (p \Leftrightarrow r) \\
+    \hline \\
+    0 & 0 & 0 & 0 & 0\\
+    0 & 0 & 1 & 0 & 1\\
+    0 & 1 & 0 & 1 & 1\\
+    0 & 1 & 1 & 1 & 0\\
+    1 & 0 & 0 & 1 & 1\\
+    1 & 0 & 1 & 1 & 0\\
+    1 & 1 & 0 & 0 & 0\\
+    1 & 1 & 1 & 0 & 1\\
+  \end{array}
+\end{displaymath}
+
+They have the same final result 
+\subsection*{c: Show that $\{\oplus, \Leftrightarrow, \neg, T, F\}$ is not a complete set of logical operators}
+The set of operators $\{\oplus, \Leftrightarrow, \neg, T, F\}$ cannot be used to create $\land$, $\lor$, or $\implies$ so it cannot be functionally complete. I have no clue how to prove this. In my head it makes sense to me that $\Leftrightarrow$ cannot diffentiate between two same 0s and 1s, but I am unsure if this has any real weight.\\
+It would be good to note that $\oplus$ and $\Leftrightarrow$ are just negations of each other, and same with just T and F, and checking $\oplus$ or $\Leftrightarrow$ with the constants T and F is only going to result itself or its negation. So the set can be reduced to only 2 items, one of the operators and negation. Hopefully this makes my previous conclusion easier to reach.
+\end{document}
