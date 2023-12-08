@@ -1,0 +1,87 @@
+\documentclass{article}
+\title{The Odd Questions of Chapter 10}
+\author{Aidan Morris}
+\date{December 5, 2023}
+\marginparwidth = 35pt
+
+\usepackage{amsmath}
+\usepackage{txfonts}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\section*{10.1: Pair the following statements with their negations}
+\begin{align*}
+  a)\  p \oplus q \: 0110 \ &: \ 1001 \:p \Leftrightarrow q \: \ (h \\
+  b)\  \neg p \land q \: 0100 \ &: \ 1011 \:p \lor \neg q \: (g \\
+  c)\  p \implies (q \implies p) \: 1111 \ &: \ 0000 \: q \land (p \land \neg p) \: \ (f \\
+  d)\  p \implies q \: 1101 \ &: \ 0010 \: p \land \neg q \: \ (e \\
+  \\
+  i) p \land (q \lor \neg q) \:0011 \\
+  j) (p \implies q) \implies p \:0011
+\end{align*}
+\section*{10.3: Determine if the following are tautologies, satisfiable, or unsatisfiable}
+a: $(p \lor q) \lor (q \implies p)$ \:- 1111 $\lor$ 1011 \:- 1111 \:- Tautology \\
+b: $(p \implies q) \implies p$ \:- 1101 $\implies$ 0011 \:- 0011 \:- Satisfiable \\
+c: $p \implies (q \implies p)$ \:- 0011 $\implies$ 1011 \:- 1111 \:- Tautology \\
+d: $(\neg p \land q) \lor (q \implies p)$ \:- 0100 $\land$ 1011 \:- 0000 \:- Unsatisfiable \\
+e: $(\neg p \implies q) \implies (\neg p \implies \neg q)$ \:- 0111 $\implies$ 1011 \:- 1011 \:- Satisfiable \\
+f: $(\neg p \implies \neg q) \Leftrightarrow (q \implies p)$ \:- 1011 $\Leftrightarrow$ 1011 \:- 1111 \: - Tautology
+
+\section*{10.5: }
+\subsection*{a: Show that for any formulas $\alpha$, $\beta$, $\gamma$...}
+$(\alpha \land \beta) \lor \alpha \lor \gamma \equiv \alpha \lor \gamma$.
+The left side contains the formula of the right $\lor$-ed with an additional start. The starting $(\alpha \land \beta)$ must only be true the same amount or less than $\alpha$ as the $\land$ requires $\alpha$ to be true to output true, so the following $\lor$ will not be true in any scenerio not already covered by the independent $\alpha$b
+\subsection*{b: Give the corresponding rule for simplifying...}
+$(\alpha \lor \beta) \land \alpha \land \gamma$
+this can be simplified to just $\alpha \land \gamma$ for reasons I explained in 10.5.a \\
+The rule names where not in the section but its the Absorption Rule if I am going to believe my `partner'.
+\subsection*{c: Find the disjunctive and conjunctive normal forms of ...}
+$(p \land q) \implies (p \oplus q)$ \\
+\begin{align*}
+  &(p \land q) \implies (p \oplus q) \\
+  &(p \land q) \implies ((p \lor q) \lor (\neg p \lor \neg q)) \\
+  &\neg(p \land q) \lor ((p \lor q) \lor (\neg p \lor \neg q)) \\
+  &\neg(p \land q) \lor (p \lor q \lor \neg p) \land (p \lor q \lor \neg q) & \text{distributed} \\
+  &\neg(p \land q) \lor (p \lor q \lor \neg p) \land T & \text{the $q \lor \neg q$ is a tautology, the $p \lor$ does not change this} \\
+  &\neg(p \land q) \lor (p \lor q \lor \neg p) & \text{$\land$-ing by $T$ has on effect} \\
+  &(\neg p \lor \neg q) \lor (p \lor q \lor \neg p) \\
+  &(\neg p \lor \neg q) \lor (p \lor q) \\
+  &(\neg p \lor p) \land (\neg q \lor q) & \text{distributed} \\
+  &T \land T &\text{both tautologies} \\
+  &T &\text{the formula is a tautology}
+\end{align*}
+Both the DNF and CNF can be written as $T$ or $(p \lor \neg p)$
+\section*{10.7: Consider the formula $p_1 \land q_1 \lor ... \lor p_n \land q_n$,}
+Its length is equal to $4n - 1$ counting every variable and operator
+\subsection*{a: What is the conjunctive normal form when $n = 3$}
+$(p_1 \land q_1) \lor (p_2 \land q_2) \lor (p_3 \land q_3)$ \\
+$(p_1 \lor (p_2 \land q_2)) \land (q_1 \lor (p_2 \land q_2)) \lor (p_3 \land q_3)$
+$(p_1 \lor p_2) \land (p_1 \lor q_2) \land (q_1 \lor p_2) \land (q_1 \lor q_2) \lor (p_3 \land q_3)$ \\
+$(p_1 \lor p_2) \land (p_1 \lor q_2) \land (q_1 \lor p_2) \land ((q_1 \lor q_2) \lor p_3) \land ((q_2 \lor q_3) \lor q_3)$ \\
+$(p_1 \lor p_2) \land (p_1 \lor q_2) \land (q_1 \lor p_2) \land (q_1 \lor q_2 \lor p_3) \land (q_2 \lor q_3 \lor q_3)$ 
+\subsection*{b: How long is the conjunctive normal form as a function of $n$}
+it is 23, so $8n - 1$o\subsection*{c: Show how disjunctive normal form may similarly increase a formulas length}
+This formula does not, but other formulas may balloon like this one in DNF as the clauses distribute
+\subsection*{d: The algorithm for determining if a formula is satisfiable requires putting it in disjunctive normal form and checking for contradictions. Why is this exponentially costly?}
+The size of the DNF grows exponentially.
+
+\section*{10.9: This problem introduces resolution theorem-proving}
+\subsection*{a:}
+\begin{displaymath}
+  \begin{array}{|c c|c c|c|c|c|}
+    q_1 & q_2 & j_1 & j_2 & (q_1 \lor q_2) \land (j_1 \lor j_2) & (q_1 \lor j_2) & ((q_1 \lor q_2) \land (j_1 \lor j_2)) \land (q_1 \lor j_2) \\
+    \hline
+    0 & 1 & 0 & 0 & 0 & 1 & 0\\
+    1 & 0 & 1 & 0 & 1 & 1 & 1\\
+    1 & 1 & 0 & 1 & 1 & 1 & 1\\
+    0 & 0 & 1 & 1 & 0 & 0 & 0\\
+  \end{array}
+\end{displaymath}
+5th row ($\alpha$) is the same as the 7th ($\alpha \land$ column 6)
+\subsection*{b:}
+Because the negations of each other in both clauses are then $\land$, they do not interact, as where one is true the other has to be false. They are constantly cancelling each other out. Adding them cannot have any effect on the final output ($\alpha$) so then if it is not unsatisfiable already, then it cannot become unsatisfiable.
+
+\end{document}
